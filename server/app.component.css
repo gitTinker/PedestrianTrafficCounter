@@ -1,0 +1,22 @@
+#results{
+  background: #e5f3e3;
+  width: 398px;
+  float: left;
+  padding: 4px;
+  border-width:3px;
+  border-style:outset;
+}
+#messages{
+  background: #e4f1f5;
+  width: 400px;
+  height: 100%;
+  float: right;
+  border-width:3px;
+  border-style:inset;
+}
+#webcam{
+  background: #e6e8eb;
+  width: 400px;
+  float: left;
+  padding: 4px;
+}

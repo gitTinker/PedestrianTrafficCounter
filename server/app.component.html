@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+<div id="config">
+  <table>
+    <tr>
+        <td>Topic: </td>
+        <td><input [(ngModel)]="topicname" type="text" /></td>
+        <td><button type="button" (click)="subscribeNewTopic()">Subscribe</button></td>
+        <td width="18%"><input [(ngModel)]="direction" type="checkbox" >
+          <div *ngIf="direction; then thenBlock else elseBlock"></div>
+          <ng-template #thenBlock>&larr;</ng-template>
+          <ng-template #elseBlock>&rarr;</ng-template>
+        </td>
+        <td>Message: </td>
+        <td><input [(ngModel)]="msg" type="text" /></td>
+        <td><button type="button" (click)="sendmsg()">Send</button></td>
+        <td></td>
+<!--         <td>&nbsp;&nbsp;<button type="button" (click)="clear()">Clear Log</button></td>
+        <td></td> -->
+    </tr>
+  </table>
+</div>
+<br /><br />
+<div id="results"><app-traffic-results [TrafficResults]="trafficResults"></app-traffic-results></div>
+<div id="messages"><app-mqttmessages [MQTTlog]="messageQueue"></app-mqttmessages></div>
+<div id="webcam"><app-webcam ></app-webcam></div>
+<div #msglog></div>
