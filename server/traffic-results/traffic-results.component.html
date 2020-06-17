@@ -1,0 +1,7 @@
+<h2>Status</h2>
+<div *ngIf="TrafficResults">
+  Subscription: {{TrafficResults.topic}}<br>
+  Status: {{TrafficResults.status}}<br>
+  Left / Right: {{TrafficResults.quantityLeft}} / {{TrafficResults.quantityRight}}<br>
+  Occupancy (est): {{TrafficResults.occupancy}}
+</div>
